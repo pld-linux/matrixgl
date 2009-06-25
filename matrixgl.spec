@@ -50,6 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/%{name}
-%{_libdir}/xscreensaver/matrixgl
 %{_mandir}/man1/matrixgl.1*
 %{_datadir}/xscreensaver/matrixgl.xml
