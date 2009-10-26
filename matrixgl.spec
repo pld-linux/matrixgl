@@ -1,18 +1,18 @@
 Summary:	3D screensaver
 Summary(pl.UTF-8):	Trójwymiarowy wygaszacz ekranu
 Name:		matrixgl
-Version:	2.2.4
+Version:	2.2.5
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/matrixgl/%{name}-%{version}-src.tar.gz
-# Source0-md5:	1e9de11d7cde444d98915426d5f00cda
-Patch0:		%{name}-xscreensaver.patch
+# Source0-md5:	be09b8a0456ac162c3e10b5be0965344
 URL:		http://sourceforge.net/projects/matrixgl/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	sed >= 4.0
 BuildRequires:	xscreensaver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +27,7 @@ ekranie.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
+%{__sed} -i 's,xscreesaver,xscreensaver,' configure.ac
 
 %build
 %{__aclocal} -I m4
