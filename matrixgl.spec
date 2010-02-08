@@ -1,12 +1,12 @@
 Summary:	3D screensaver
 Summary(pl.UTF-8):	Trójwymiarowy wygaszacz ekranu
 Name:		matrixgl
-Version:	2.2.7
+Version:	2.2.8
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://downloads.sourceforge.net/matrixgl/%{name}-%{version}-src.tar.gz
-# Source0-md5:	146f17b89083b589ededc4c690b1319e
+Source0:	http://downloads.sourceforge.net/matrixgl/%{name}-%{version}.tar.gz
+# Source0-md5:	a202143179af92b788394f8febd26337
 URL:		http://sourceforge.net/projects/matrixgl/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
@@ -24,7 +24,7 @@ Matrixgl to trójwymiarowy wygaszacz ekranu (częściowo dla KDE) oparty
 na "Matrix: Reaktywacja". Posiada możliwość pracy na pełnym ekranie.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__aclocal} -I m4
