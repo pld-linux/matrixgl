@@ -1,0 +1,9 @@
+--- matrixgl-2.3/src/Makefile.am~	2010-06-24 03:46:04.000000000 +0200
++++ matrixgl-2.3/src/Makefile.am	2010-06-24 13:58:36.434266610 +0200
+@@ -15,5 +15,5 @@
+ 
+ # Now make sure it finds Xlib and GL/GLU
+ matrixgl_CFLAGS = -DNIX_MODE -pedantic -ansi -Wall -W @x_includes@ @GLU_CFLAGS@
+-matrixgl_LDFLAGS = -lm @x_libraries@ -lX11 @GLU_LIBS@ 
++matrixgl_LDFLAGS = -lm -lX11 @GLU_LIBS@ 
+ 
