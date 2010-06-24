@@ -1,0 +1,27 @@
+--- matrixgl-2.3/configure.ac~	2010-06-24 03:49:54.000000000 +0200
++++ matrixgl-2.3/configure.ac	2010-06-24 13:51:53.057640366 +0200
+@@ -39,15 +39,15 @@
+ 
+ dnl We need a cpp compiler to link libglu
+ AC_PROG_CXX
+-if test -z "$ac_ct_CXX"; then
+-   echo "***************************************************************"
+-   echo "FATAL ERROR: A c++ compiler cannot be found on your system."
+-   echo "You will need to install one for matrixgl to work. Check your "
+-   echo "package manager for g++ or similar. Check the dependencies"
+-   echo "section of the README file for more information."
+-   echo "***************************************************************"
+-   exit 1
+-fi
++#if test -z "$ac_ct_CXX"; then
++#   echo "***************************************************************"
++#   echo "FATAL ERROR: A c++ compiler cannot be found on your system."
++#   echo "You will need to install one for matrixgl to work. Check your "
++#   echo "package manager for g++ or similar. Check the dependencies"
++#   echo "section of the README file for more information."
++#   echo "***************************************************************"
++#   exit 1
++#fi
+ 
+ dnl Headers
+ AC_HEADER_STDC
